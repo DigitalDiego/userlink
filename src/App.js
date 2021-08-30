@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <Switch>
-        <Route path='/' exact>
+        <Route path='/userlink' exact>
           <LandingPage firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} email={email} setEmail={setEmail} password={password} setPassword={setPassword} month={month} setMonth={setMonth} day={day} setDay={setDay} year={year} setYear={setYear} gender={gender} setGender={setGender}/>
         </Route>
         <Route path='/log-in'>

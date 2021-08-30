@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Style/Person.css'
 import {BiUserPlus} from 'react-icons/bi'
-const Person = ({name, image}) => {
+const Person = ({name, image, setFriend}) => {
     return (
         <div className='person'>
             <div className="image-container">
