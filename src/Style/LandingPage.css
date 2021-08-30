@@ -93,8 +93,7 @@
     border-radius: 10px;
     border: none;
     outline: none;
-  }
-  option {
+    font-size: 1em;
   }
   .radio {
     display: flex;
