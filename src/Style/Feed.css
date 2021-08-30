@@ -58,6 +58,7 @@
     border-radius: 10px;
     color: #264653;
     padding: 0.5em 1em;
+    position: relative;
   }
   .post-header {
     width: 100%;
@@ -88,6 +89,17 @@
   .date p {
     font-weight: bold;
     font-size: 0.9em;
+  }
+  .delete-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.8em;
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
   }
 }
 @media only screen and (min-width: 1800px) {
@@ -158,6 +170,9 @@
     justify-content: flex-start;
     align-items: center;
   }
+  .post-header h2 {
+    font-size: 1.59em;
+  }
   .content {
     width: 100%;
     height: 60%;
@@ -167,6 +182,7 @@
   }
   .content-text {
     font-weight: bold;
+    font-size: 1em;
   }
   .date {
     width: 100%;
@@ -177,5 +193,16 @@
   }
   .date p {
     font-weight: bold;
+  }
+  .delete-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.8em;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
   }
 }

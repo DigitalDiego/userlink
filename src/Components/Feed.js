@@ -17,6 +17,10 @@ const Feed = ({firstName}) => {
         setTodos([...todos].concat(newTodo))
         setTodo('')
     }
+    const deleteTodo = (id) => {
+        const updatedTodos = [...todos].filter((todo) => todo.id != id)
+        setTodos(updatedTodos)
+    }
     return (
         <section className='feed'>
             <form className="post-section" onSubmit={handleSubmit}>
@@ -60,6 +64,7 @@ const Feed = ({firstName}) => {
                                     {todo.month} / {todo.day} / {todo.year}
                                 </p>
                             </div>
+                            <button className="delete-btn" onClick={() => deleteTodo(todo.id)}>X</button>
                         </div>                    
                     ))}
             </div>
