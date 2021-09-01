@@ -112,9 +112,9 @@ const Container = styled.section`
 `
 const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword, month, setMonth, day, setDay, year, setYear}) => {
     const handleAccountCreation = (event) => {
-        if(firstName === '' || lastName === '' || email === '' || password === '' || month === '' || day === '' || year === ''){
+        if(firstName !== 'admin' || lastName !== 'admin' || email !== 'admin@userlink.com' || password !== 'user2021' || month !== 'January' || day !== '1' || year !== '1980'){
             event.preventDefault()
-            alert("An input field is empty.")
+            alert("An input is incorrect. Try again.")
         } else {
             return null
         }
