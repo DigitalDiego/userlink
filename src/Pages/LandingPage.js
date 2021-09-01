@@ -32,6 +32,7 @@ const Container = styled.section`
             .menu-bars{
                 margin-left:.5em;
                 font-size:1.5em;
+                cursor:pointer;
             }
         }
     }

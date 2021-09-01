@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import GlobalStyle from './GlobalStyle'
 import {Switch, Route} from 'react-router-dom'
-import {LandingPage, SignIn} from './Pages'
+import {LandingPage, SignIn, Home} from './Pages'
 const App = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -37,6 +37,9 @@ const App = () => {
           email={email}
           password={password}
           />
+        </Route>
+        <Route path='/home'>
+          <Home/>
         </Route>
       </Switch>
     </>
