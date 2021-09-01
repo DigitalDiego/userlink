@@ -4,6 +4,10 @@ import styled from 'styled-components'
 const Container = styled.section`
     width:100%;
     height:80vh;
+    position:absolute;
+    top:0;
+    right:0;
+    background:#264653;
     form{
         width:100%;
         height:5vh;
@@ -34,6 +38,45 @@ const Container = styled.section`
             font-weight:bold;
         }
     }
+    .post-list{
+        width:100%;
+        height:75vh;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        flex-direction:column;
+        padding:0 1em;
+        .post{
+            width:100%;
+            background:linen;
+            border-radius:10px;
+            padding:.2em .4em;
+            margin-bottom:.5em;
+            .post-header{
+                width:100%;
+                height:50px;
+                padding:unset;
+                h1{
+                    font-size:1.5em;
+                    color:#264653;
+                }
+            }
+            .content{
+                width:100%;
+                p{
+                    color:#264653;
+                }
+            }
+            .date{
+                p{
+                    color:#264653;
+                    display:flex;
+                    justify-content:flex-end;
+                    align-items:center;
+                }
+            }
+        }
+    }
 `
 const Feed = ({firstName}) => {
     const [post, setPost] = useState('')
@@ -60,7 +103,7 @@ const Feed = ({firstName}) => {
             <div className="post-list">
                 {posts.map((post) => (
                     <div className="post" key={post.id}>
-                        <header>
+                        <header className="post-header">
                             <h1>{post.name}</h1>
                         </header>
                         <div className="content">

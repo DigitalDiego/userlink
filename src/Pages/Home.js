@@ -32,6 +32,21 @@ const Container = styled.section`
         width:100%;
         height:90vh;
         position:relative;
+        .greeting{
+            width:100%;
+            height:80vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            padding:0 1em;
+            h1{
+                font-size:1.9em;
+                span{
+                    font-family:'Pacifico', sans-siref;
+                }
+            }
+        }
         .mobile-nav{
             position:absolute;
             bottom:0;
@@ -40,7 +55,6 @@ const Container = styled.section`
             height:10vh;
             display:flex;
             justify-content:space-between;
-
             align-items:center;
             .mobile-nav-link{
                 width:100%;
@@ -68,6 +82,10 @@ const Home = ({firstName}) => {
                 <FaBars className="menu-btn"/>
             </header>
             <div className="mobile-container">
+                        <div className="greeting">
+                            <h1>Welcome To <span>User Link</span></h1>
+                            <p>Look around to get started.</p>
+                        </div>
                 <Switch>
                     <Route path="/home/feed">
                         <Feed firstName={firstName}/>

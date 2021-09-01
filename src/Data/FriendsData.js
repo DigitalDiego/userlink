@@ -1,0 +1,54 @@
+import ImageOne from '../Images/man-1.svg'
+import ImageTwo from '../Images/woman-1.svg'
+export const friendsData = [
+    {
+        name:"Andrew",
+        image:ImageOne,
+        status:false
+    },
+    {
+        name:"Ashley",
+        image:ImageTwo,
+        status:false
+    },
+    {
+        name:"Kevin",
+        image:ImageOne,
+        status:true
+    },
+    {
+        name:"Nataly",
+        image:ImageTwo,
+        status:false
+    },
+    {
+        name:"Joseph",
+        image:ImageOne,
+        status:true
+    },
+    {
+        name:"Melissa",
+        image:ImageTwo,
+        status:true
+    },
+    {
+        name:"John",
+        image:ImageOne,
+        status:false
+    },
+    {
+        name:"Cynthia",
+        image:ImageTwo,
+        status:true
+    },
+    {
+        name:"Micheal",
+        image:ImageOne,
+        status:false
+    },
+    {
+        name:"Chelsea",
+        image:ImageTwo,
+        status:true
+    },
+]
