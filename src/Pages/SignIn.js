@@ -6,6 +6,21 @@ const Container = styled.section`
     height:100vh;
     display:grid;
     place-items:center;
+    position:relative;
+    header{
+        width:100%;
+        display:grid;
+        place-items:center;
+        position:absolute;
+        top:0;
+        right:0;
+        padding:0 1em;
+        h1{
+            font-size:2.8em;
+            color:linen;
+            font-family:'Pacifico', sans-serif;
+        }
+    }
     form{
         width:90%;
         background:linen;
@@ -54,6 +69,11 @@ const SignIn = ({email, password}) => {
     }
     return (
         <Container>
+            <header>
+                <Link to="/userlink">
+                    <h1>User Link</h1>
+                </Link>
+            </header>
             <form>
                 <h1>Log In</h1>
                 <input type="text" placeholder="Email" onChange={event => setUserEmail(event.target.value)}/>
