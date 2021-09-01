@@ -1,51 +1,166 @@
 import React from 'react'
-import '../Style/LandingPage.css'
+import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword, month, setMonth, day, setDay, year, setYear, gender, setGender}) => {
+import {FaBars} from 'react-icons/fa'
+const Container = styled.section`
+    width:100%;
+    height:100vh;
+    header{
+        width:100%;
+        height:10vh;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0 1em;
+        h1{
+            font-family:'Pacifico', sans-serif;
+            font-size:2em;
+        }
+        .menu{
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            .log-in-link{
+                color:#264653;
+                background:linen;
+                border-radius:10px;
+                padding:.1em .5em;
+                font-size:1.1em;
+                font-weight:bold;
+            }
+            .menu-bars{
+                margin-left:.5em;
+                font-size:1.5em;
+            }
+        }
+    }
+    .container{
+        display:flex;
+        width:100%;
+        height:90vh;
+        .left-col{
+            display:none;
+        }
+        .right-col{
+            width:100%;
+            height:100%;
+            display:grid;
+            place-items:center;
+            form{
+                background:linen;
+                width:90%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+                padding:1em 0;
+                border-radius:10px;
+                h1{
+                    text-align:center;
+                    color:#264653;
+                    margin-bottom:1em;
+                    font-size:2em;
+                }
+                input{
+                    width:90%;
+                    background:transparent;
+                    border:none;
+                    outline:none;
+                    border-bottom:2px solid #264653;
+                    margin-bottom:2em;
+                    padding:.2em;
+                    color:#264653;
+                    font-size:1em;
+                    &::placeholder{
+                        color:#264653;
+                    }
+                }
+                .birthday{
+                    width:90%;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    margin-bottom:2em;
+                    select{
+                        padding:.2em .4em;
+                        border:none;
+                        outline:none;
+                        background:#264653;
+                        color:linen;
+                        border-radius:10px;
+                        font-weight:bold;
+                        font-size:1em;
+                        option{
+                            background:#fff;
+                            color:#264653;
+                        }
+                    }
+                }
+                .sign-in-btn{
+                    color:linen;
+                    background:#264653;
+                    padding:.5em 1em;
+                    border-radius:10px;
+                    font-size:1em;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+`
+const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword, month, setMonth, day, setDay, year, setYear}) => {
     const handleAccountCreation = (event) => {
-        if(firstName === '' || lastName === '' || email === '' || password === '' || month === '' || day === '' || year === '' || gender === ''){
+        if(firstName === '' || lastName === '' || email === '' || password === '' || month === '' || day === '' || year === ''){
             event.preventDefault()
-            alert('Some fields are not completed')
+            alert("An input field is empty.")
         } else {
             return null
         }
     }
     return (
-        <section className="landing-page">
-            <header className="landing-page-header">
-                <h1 className="landing-page-h1">User Link</h1>
-                <Link to='/log-in' className="sign-in">
-                    Log In
-                </Link>
+        <Container>
+            <header>
+                <h1>User Link</h1>
+                <div className="menu">
+                    <Link to='/log-in' className="log-in-link">
+                        Log In
+                    </Link>
+                    <FaBars className="menu-bars"/>
+                </div>
             </header>
             <div className="container">
                 <div className="left-col">
-                    <p>MeetUp is where people have a chance to get together digitally and interact with as many people<br/> as they like. Join today and be part of an ongrowing community. Meet people world wide<br/> and make connections that will last a lifetime.</p>
+                    <p>At User Link you can interact with people all over the world.<br/> Here you can add friends
+                     and connect with communities of<br/> people
+                    that may be into things your into.
+                    It is fun and a good<br/> way to meet people in todays day.
+                    </p>
                 </div>
                 <div className="right-col">
-                    <form className="landing-page-form">
-                        <h1 className="landing-page-form-h1">Create An Account</h1>
-                        <input className="landing-page-input" type="text" placeholder='First Name' onChange={event => setFirstName(event.target.value)}/>
-                        <input className="landing-page-input" type="text" placeholder='Last Name' onChange={event => setLastName(event.target.value)}/>
-                        <input className="landing-page-input" type="email" placeholder='Email' onChange={event => setEmail(event.target.value)}/>
-                        <input className="landing-page-input" type="password" placeholder='Password' onChange={event => setPassword(event.target.value)}/>
+                    <form>
+                        <h1>Create Account</h1>
+                        <input type="text" placeholder="First Name" onChange={event => setFirstName(event.target.value)}/>
+                        <input type="text" placeholder="Last Name" onChange={event => setLastName(event.target.value)}/>
+                        <input type="email" placeholder="Email" onChange={event => setEmail(event.target.value)}/>
+                        <input type="password" placeholder="Password" onChange={event => setPassword(event.target.value)}/>
                         <div className="birthday">
-                            <select name="month" id="month" onChange={event => setMonth(event.target.value)}>
+                            <select name="month" id="month" onClick={event => setMonth(event.target.value)}>
                                 <option value="">Month</option>
-                                <option value="january">January</option>
-                                <option value="february">February</option>
-                                <option value="march">March</option>
-                                <option value="april">April</option>
-                                <option value="may">May</option>
-                                <option value="june">June</option>
-                                <option value="july">July</option>
-                                <option value="august">August</option>
-                                <option value="september">September</option>
-                                <option value="october">October</option>
-                                <option value="november">November</option>
-                                <option value="december">December</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">Novemeber</option>
+                                <option value="December">December</option>
                             </select>
-                            <select name="day" id="day" onChange={event => setDay(event.target.value)}>
+                            <select name="day" id="day" onClick={event => setDay(event.target.value)}>
                                 <option value="">Day</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -79,7 +194,7 @@ const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, set
                                 <option value="30">30</option>
                                 <option value="31">31</option>
                             </select>
-                            <select name="year" id="year" onChange={event => setYear(event.target.value)}>
+                            <select name="year" id="year" onClick={event => setYear(event.target.value)}>
                                 <option value="">Year</option>
                                 <option value="1980">1980</option>
                                 <option value="1981">1981</option>
@@ -107,25 +222,13 @@ const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, set
                                 <option value="2003">2003</option>
                             </select>
                         </div>
-                        <div className="radio">
-                            <div className="block">
-                                <label htmlFor="male">Male</label>
-                                <input type="radio" id='male' name='gender' value='male' onClick={event => setGender(event.target.value)}/>
-                            </div>
-                            <div className="block">
-                                <label htmlFor="female">Female</label>
-                                <input type="radio" id='female' name='gender' value='female' onClick={event => setGender(event.target.value)}/>
-                            </div>
-                        </div>
-                        <Link to='/home' onClick={handleAccountCreation}>
-                            <button className="landing-page-btn">
-                                Create Account
-                            </button>
+                        <Link to='/home' className="sign-in-btn" onClick={handleAccountCreation}>
+                            Create Account
                         </Link>
                     </form>
                 </div>
             </div>
-        </section>
+        </Container>
     )
 }
 
