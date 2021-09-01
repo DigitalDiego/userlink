@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
             a{
                 text-decoration:none;
             }
+            input{
+                border-radius:0;
+            }
         }
     }
 `
