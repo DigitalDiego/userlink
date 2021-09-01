@@ -7,9 +7,6 @@ const App = () => {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [month, setMonth] = useState('')
-  const [day, setDay] = useState('')
-  const [year, setYear] = useState('')
   return (
     <>
       <GlobalStyle/>
@@ -24,12 +21,6 @@ const App = () => {
           setEmail={setEmail} 
           password={password} 
           setPassword={setPassword}
-          month={month}
-          setMonth={setMonth}
-          day={day}
-          setDay={setDay}
-          year={year}
-          setYear={setYear}
           />
         </Route>
         <Route path="/log-in">

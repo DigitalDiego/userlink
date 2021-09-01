@@ -110,9 +110,9 @@ const Container = styled.section`
         }
     }
 `
-const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword, month, setMonth, day, setDay, year, setYear}) => {
+const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword}) => {
     const handleAccountCreation = (event) => {
-        if(firstName === '' || lastName === '' || email === '' || password === '' || month === '' || day === '' || year === ''){
+        if(firstName === '' || lastName === '' || email === '' || password === ''){
             event.preventDefault()
             alert("An input field is empty.")
         } else {
