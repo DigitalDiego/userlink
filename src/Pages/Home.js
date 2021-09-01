@@ -40,6 +40,7 @@ const Container = styled.section`
             height:10vh;
             display:flex;
             justify-content:space-between;
+
             align-items:center;
             .mobile-nav-link{
                 width:100%;
@@ -52,7 +53,7 @@ const Container = styled.section`
         }
     }
 `
-const Home = () => {
+const Home = ({firstName}) => {
     return (
         <Container>
             <header>
@@ -68,7 +69,9 @@ const Home = () => {
             </header>
             <div className="mobile-container">
                 <Switch>
-                    <Route path="/home/feed" component={Feed}/>
+                    <Route path="/home/feed">
+                        <Feed firstName={firstName}/>
+                    </Route>
                     <Route path="/home/friends" component={Friends}/>
                     <Route path="/home/find-people" component={FindPeople}/>
                 </Switch>

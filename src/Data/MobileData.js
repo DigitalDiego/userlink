@@ -9,6 +9,6 @@ export const mobileData = [
     },
     {
         icon:<i className="fas fa-user-plus"></i>,
-        link:"home/find-people"
+        link:"/home/find-people"
     },
 ]
