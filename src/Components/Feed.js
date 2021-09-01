@@ -36,6 +36,7 @@ const Container = styled.section`
             outline:none;
             cursor:pointer;
             font-weight:bold;
+            background:linen;
         }
     }
     .post-list{

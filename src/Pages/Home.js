@@ -41,10 +41,15 @@ const Container = styled.section`
             flex-direction:column;
             padding:0 1em;
             h1{
-                font-size:1.9em;
+                font-size:1.5em;
+                text-align:center;
                 span{
                     font-family:'Pacifico', sans-siref;
                 }
+            }
+            p{
+                font-size:.8em;
+                text-align:center;
             }
         }
         .mobile-nav{
