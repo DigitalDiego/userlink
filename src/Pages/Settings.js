@@ -44,7 +44,7 @@ const Container = styled.section`
                 color:linen;
                 width:50%;
                 outline:none;
-                font-size:1.1em;
+                font-size:1.2em;
             }
         }
     }
@@ -53,7 +53,7 @@ const Settings = ({firstName, setFirstName, lastName, setLastName, email, setEma
     return (
         <Container>
             <header className='settings-header'>
-                <h1>Diego Hernandez</h1>
+                <h1>{firstName} {lastName}</h1>
             </header>
             <div className="container">
                 <div className="block">
