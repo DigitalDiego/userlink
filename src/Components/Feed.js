@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 
 const Container = styled.section`
@@ -95,6 +95,17 @@ const Feed = ({firstName}) => {
         setPosts([...posts].concat(newPost))
         setPost('')
     }
+    useEffect(() => {
+        const template = localStorage.getItem("posts")
+        const loadedPosts = JSON.parse(template)
+        if(loadedPosts){
+            setPosts(loadedPosts)
+        }
+    }, [])
+    useEffect(() => {
+        const template = JSON.stringify(posts)
+        localStorage.setItem('posts', template)
+    }, [posts])
     return (
         <Container>
             <form onSubmit={handlePost}>
