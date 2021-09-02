@@ -30,8 +30,8 @@ const Container = styled.section`
         align-items:center;
         padding:.1em .2em;
         .image-container{
-            width:2.1em;
-            height:2.1em;
+            width:2.5em;
+            height:2.5em;
             border:1px solid #264653;
             overflow:hidden;
             border-radius:50%;

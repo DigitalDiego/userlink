@@ -30,7 +30,7 @@ const Container = styled.section`
         align-items:center;
         padding:.1em .2em;
         .image-container{
-            width:2.1em;
+            width:2.5em;
             height:2.1em;
             border:1px solid #264653;
             overflow:hidden;
@@ -60,8 +60,8 @@ const Container = styled.section`
             display:grid;
             place-items:center;
             .status{
-                width:.8em;
-                height:.8em;
+                width:.5em;
+                height:.5em;
                 border-radius:50%;
             }
             .on{

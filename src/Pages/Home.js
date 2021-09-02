@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import {FaBars} from 'react-icons/fa'
 import {Feed, Friends, FindPeople} from '../Components'
-import {Settings} from '../Pages'
+import {Settings, Policy} from '../Pages'
 import {mobileData} from '../Data/MobileData'
 const Container = styled.section`
     width:100%;
@@ -101,6 +101,7 @@ const Home = ({firstName, setFirstName, lastName, setLastName,  email, setEmail,
                     <Route path='/home/settings'>
                         <Settings firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>
                     </Route>
+                    <Route path="/home/policy" component={Policy}/>
                 </Switch>
                 <div className="mobile-nav">
                         {mobileData.map((item, index) => (
