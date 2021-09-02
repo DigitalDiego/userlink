@@ -44,6 +44,7 @@ const Container = styled.section`
                 color:linen;
                 width:50%;
                 outline:none;
+                font-size:1.1em;
             }
         }
     }
