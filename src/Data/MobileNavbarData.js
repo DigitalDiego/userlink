@@ -1,15 +1,15 @@
-export const navbarData = [
+export const mobileNavbarData = [
     {
         title:"Home",
-        link:"/home"
+        link:"/home/feed"
     },
     {
         title:"Settings",
-        link:"/settings"
+        link:"/home/settings"
     },
     {
         title:"Policy",
-        link:"/policy"
+        link:"/home/policy"
     },
     {
         title:"Log Out",

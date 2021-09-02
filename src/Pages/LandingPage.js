@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-import {FaBars} from 'react-icons/fa'
 const Container = styled.section`
     width:100%;
     height:100vh;
@@ -28,11 +27,6 @@ const Container = styled.section`
                 padding:.1em .5em;
                 font-size:1.1em;
                 font-weight:bold;
-            }
-            .menu-bars{
-                margin-left:.5em;
-                font-size:1.5em;
-                cursor:pointer;
             }
         }
     }
@@ -127,7 +121,6 @@ const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, set
                     <Link to='/log-in' className="log-in-link">
                         Log In
                     </Link>
-                    <FaBars className="menu-bars"/>
                 </div>
             </header>
             <div className="container">
