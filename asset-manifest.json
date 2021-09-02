@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/userlink/static/js/main.20a41b57.chunk.js",
-    "main.js.map": "/userlink/static/js/main.20a41b57.chunk.js.map",
+    "main.js": "/userlink/static/js/main.0552c2f1.chunk.js",
+    "main.js.map": "/userlink/static/js/main.0552c2f1.chunk.js.map",
     "runtime-main.js": "/userlink/static/js/runtime-main.a29e6fae.js",
     "runtime-main.js.map": "/userlink/static/js/runtime-main.a29e6fae.js.map",
-    "static/js/2.6d85018d.chunk.js": "/userlink/static/js/2.6d85018d.chunk.js",
-    "static/js/2.6d85018d.chunk.js.map": "/userlink/static/js/2.6d85018d.chunk.js.map",
+    "static/js/2.ca266155.chunk.js": "/userlink/static/js/2.ca266155.chunk.js",
+    "static/js/2.ca266155.chunk.js.map": "/userlink/static/js/2.ca266155.chunk.js.map",
     "index.html": "/userlink/index.html",
-    "static/js/2.6d85018d.chunk.js.LICENSE.txt": "/userlink/static/js/2.6d85018d.chunk.js.LICENSE.txt",
+    "static/js/2.ca266155.chunk.js.LICENSE.txt": "/userlink/static/js/2.ca266155.chunk.js.LICENSE.txt",
     "static/media/man-1.544634a4.svg": "/userlink/static/media/man-1.544634a4.svg",
     "static/media/woman-1.9abe5c0c.svg": "/userlink/static/media/woman-1.9abe5c0c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a29e6fae.js",
-    "static/js/2.6d85018d.chunk.js",
-    "static/js/main.20a41b57.chunk.js"
+    "static/js/2.ca266155.chunk.js",
+    "static/js/main.0552c2f1.chunk.js"
   ]
 }
