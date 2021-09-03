@@ -74,6 +74,24 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:800px){
+        width:100%;
+        height:50%;
+        position:unset;
+        border-bottom:1px solid linen;
+        .friend{
+            height:2em;
+            .image-container{
+                width:2em;
+                height:1.55em;
+            }
+            .name-container{
+                p{
+                    font-size:1em;
+                }
+            }
+        }
+    }
 `
 const Friends = () => {
     return (

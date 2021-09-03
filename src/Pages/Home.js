@@ -4,7 +4,7 @@ import {navbarData} from '../Data/NavbarData'
 import { Switch, Route } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import {FaBars} from 'react-icons/fa'
-import {Feed, Friends, FindPeople} from '../Components'
+import {Feed, Friends, FindPeople, DesktopContainer} from '../Components'
 import {Settings, Policy} from '../Pages'
 import {mobileData} from '../Data/MobileData'
 const Container = styled.section`
@@ -20,6 +20,7 @@ const Container = styled.section`
         h1{
             font-family:"Pacifico", sans-serif;
             font-size:2em;
+            color:linen;
         }
         nav{
             display:none;
@@ -72,12 +73,49 @@ const Container = styled.section`
             }
         }
     }
+    .desktop-container{
+        display:none;
+    }
+    @media only screen and (min-width:800px){
+        display:unset;
+        header{
+            padding:0 5em;
+            border-bottom:1px solid linen;
+            h1{
+                font-size:3em;
+            }
+            nav{
+                display:flex;
+                height:100%;
+                justify-content:flex-end;
+                align-items:center;
+                .nav-link{
+                    color:linen;
+                    font-weight:bold;
+                    margin-left:2em;
+                }
+            }
+            .menu-btn{
+                display:none;
+            }
+        }
+        .mobile-container{
+            display:none;
+        }
+        .desktop-container{
+            display:unset;
+            width:100%;
+            height:90vh;
+        }
+    }
 `
 const Home = ({firstName, setFirstName, lastName, setLastName,  email, setEmail,  password, setPassword, toggle}) => {
     return (
         <Container>
             <header>
-                <h1>User Link</h1>
+                <Link to='/home'>
+                    <h1>User Link</h1>
+                </Link>
                 <nav>
                     {navbarData.map((item, index) => (
                         <Link className="nav-link" to={item.link} key={index}>
@@ -111,6 +149,17 @@ const Home = ({firstName, setFirstName, lastName, setLastName,  email, setEmail,
 
                         ))}
                 </div>
+            </div>
+            <div className="desktop-container">
+                <Switch>
+                    <Route path="/home" exact>
+                        <DesktopContainer firstName={firstName}/>
+                    </Route>
+                    <Route path='/home/settings'>
+                        <Settings firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>
+                    </Route>
+                    <Route path="/home/policy" component={Policy}/>
+                </Switch>
             </div>
         </Container>
     )

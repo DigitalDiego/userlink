@@ -78,6 +78,41 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:800px){
+        width:80%;
+        height:100%;
+        position:unset;
+        border-right:1px solid linen;
+        padding:1em 1em 0 5em;
+        form{
+            input{
+                width:80%;
+            }
+        }
+        .post-list{
+            .post{
+                width:90%;
+                margin:1em 0;
+                padding:.2em .5em;
+                .post-header{
+                    margin-bottom:.5em;
+                    h1{
+                        font-size:2em;
+                    }
+                }
+                .content{
+                    p{
+                        font-size:1.1em;
+                    }
+                }
+                .date{
+                    p{
+                        font-size:1.1em;
+                    }
+                }
+            }
+        }
+    }
 `
 const Feed = ({firstName}) => {
     const [post, setPost] = useState('')

@@ -5,11 +5,11 @@ export const navbarData = [
     },
     {
         title:"Settings",
-        link:"/settings"
+        link:"/home/settings"
     },
     {
         title:"Policy",
-        link:"/policy"
+        link:"/home/policy"
     },
     {
         title:"Log Out",

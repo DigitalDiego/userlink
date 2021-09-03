@@ -26,11 +26,25 @@ const Container = styled.section`
             margin-bottom:.5em;
             input{
                 margin-right:.5em;
+                border:none;
+                outline:none;
             }
         }
         a{
             color:lightblue;
             font-weight:bold;
+        }
+    }
+    @media only screen and (min-width:800px){
+        position:unset;
+        width:100%;
+        height:90vh;
+        padding:0 5em;
+        .block{
+            width:100%;
+            h2{
+                font-size:1.9em;
+            }
         }
     }
 `

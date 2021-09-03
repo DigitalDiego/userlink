@@ -45,6 +45,9 @@ const Container = styled.section`
             border-bottom:2px solid #264653;
             width:90%;
             margin-bottom:2em;
+            &::placeholder{
+                color:#264653;
+            }
         }
         .log-in-btn{
             padding:.5em 1em;
@@ -53,6 +56,22 @@ const Container = styled.section`
             font-weight:bold;
             font-size:1em;
             border-radius:10px;
+        }
+    }
+    @media only screen and (min-width:800px){
+        padding:0 5em;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        header{
+            position:unset;
+            h1{
+                font-size:5em;
+            }
+        }
+        form{
+            width:50%;
         }
     }
 `

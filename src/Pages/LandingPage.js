@@ -71,27 +71,6 @@ const Container = styled.section`
                         color:#264653;
                     }
                 }
-                .birthday{
-                    width:90%;
-                    display:flex;
-                    justify-content:space-between;
-                    align-items:center;
-                    margin-bottom:2em;
-                    select{
-                        padding:.2em .4em;
-                        border:none;
-                        outline:none;
-                        background:#264653;
-                        color:linen;
-                        border-radius:10px;
-                        font-weight:bold;
-                        font-size:1em;
-                        option{
-                            background:#fff;
-                            color:#264653;
-                        }
-                    }
-                }
                 .sign-in-btn{
                     color:linen;
                     background:#264653;
@@ -99,6 +78,42 @@ const Container = styled.section`
                     border-radius:10px;
                     font-size:1em;
                     font-weight:bold;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width:800px){
+        header{
+            padding:0 5em;
+            h1{
+                font-size:3em;
+            }
+        }
+        .container{
+            .left-col{
+                width:50%;
+                height:100%;
+                display:flex;
+                justify-content:flex-start;
+                align-items:center;
+                padding-left:5em;
+                p{
+                    font-size:1.2em;
+                    line-height:1.5em;
+                }
+            }
+            .right-col{
+                width:50%;
+                display:grid;
+                justify-content:flex-end;
+                align-items:center;
+                padding:unset;
+                padding-right:5em;
+                form{
+                    width:450px;
+                    input{
+                        width:80%;
+                    }
                 }
             }
         }
@@ -125,10 +140,10 @@ const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, set
             </header>
             <div className="container">
                 <div className="left-col">
-                    <p>At User Link you can interact with people all over the world.<br/> Here you can add friends
-                     and connect with communities of<br/> people
+                    <p>Here at User Link you can interact with people all over the world. Here you can add friends
+                     and connect with communities of people
                     that may be into things your into.
-                    It is fun and a good<br/> way to meet people in todays day.
+                    It is fun and a good way to meet people in todays day.
                     </p>
                 </div>
                 <div className="right-col">

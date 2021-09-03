@@ -48,6 +48,27 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:800px){
+        position:unset;
+        width:100%;
+        height:90vh;
+        padding:0 5em;
+        .settings-header{
+            border:none;
+            height:20%;
+        }
+        .container{
+            height:80%;
+            .block{
+                label{
+                    font-size:1.5em;
+                }
+                input{
+                    font-size:1.5em;
+                }
+            }
+        }
+    }
 `
 const Settings = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword}) => {
     return (
