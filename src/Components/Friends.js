@@ -15,6 +15,16 @@ const Container = styled.section`
     overflow:hidden;
     overflow-y:scroll;
     padding:0 1em;
+    &::-webkit-scrollbar{
+        width:5px;
+    }
+    &::-webkit-scrollbar-track{
+        border:none;
+    }
+    &::-webkit-scrollbar-thumb{
+        background:linen;
+        border-radius:50px;
+    }
     h1{
         font-family:'Pacifico', sans-serif;
         font-size:1.5em;
@@ -93,6 +103,9 @@ const Container = styled.section`
         }
     }
     @media only screen and (min-width:1800px){
+        h1{
+            font-size:2em;
+        }
         .friend{
             width:80%;
             height:2.1em;
