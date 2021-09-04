@@ -92,6 +92,17 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:1800px){
+        .friend{
+            width:80%;
+            height:2.1em;
+            padding:.1em .2em;
+            .image-container{
+                width:2.1em;
+                height:1.65em;
+            }
+        }
+    }
 `
 const Friends = () => {
     return (

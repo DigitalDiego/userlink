@@ -118,6 +118,25 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:1800px){
+        header{
+            h1{
+                font-size:4em;
+            }
+            .menu{
+                .log-in-link{
+                    padding:.1em 1em;
+                }
+            }
+        }
+        .container{
+            .left-col{
+                p{
+                    font-size:1.9em;
+                }
+            }
+        }
+    }
 `
 const LandingPage = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword}) => {
     const handleAccountCreation = (event) => {

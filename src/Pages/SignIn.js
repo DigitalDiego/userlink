@@ -74,6 +74,14 @@ const Container = styled.section`
             width:50%;
         }
     }
+    @media only screen and (min-width:1800px){
+        form{
+            width:40%;
+            input{
+                width:80%;
+            }
+        }
+    }
 `
 const SignIn = ({email, password}) => {
     const [userEmail, setUserEmail] = useState('')

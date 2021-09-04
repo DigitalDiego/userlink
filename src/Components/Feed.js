@@ -113,6 +113,27 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:1800px){
+        form{
+            input{
+                font-size:1.1em;
+            }
+            button{
+                font-size:1.1em;
+            }
+        }
+        .post-list{
+            .post{
+                padding:.5em 1em;
+                .post-header{
+                    margin-bottom:1em;
+                    h1{
+                        font-size:2.2em;
+                    }
+                }
+            }
+        }
+    }
 `
 const Feed = ({firstName}) => {
     const [post, setPost] = useState('')

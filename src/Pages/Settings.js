@@ -69,6 +69,16 @@ const Container = styled.section`
             }
         }
     }
+    @media only screen and (min-width:1800px){
+        .settings-header{
+            h1{
+                font-size:4em;
+            }
+        }
+        .container{
+            padding:20em;
+        }
+    }
 `
 const Settings = ({firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword}) => {
     return (

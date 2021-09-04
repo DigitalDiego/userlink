@@ -9,6 +9,16 @@ const Container = styled.section`
     background:#264653;
     overflow:hidden;
     overflow-y:scroll;
+    &::-webkit-scrollbar{
+        width:5px;
+    }
+    &::-webkit-scrollbar-track{
+        border:none;
+    }
+    &::-webkit-scrollbar-thumb{
+        border-radius:50px;
+        background:linen;
+    }
     .block{
         width:100%;
         padding:1em;
@@ -44,6 +54,17 @@ const Container = styled.section`
             width:100%;
             h2{
                 font-size:1.9em;
+            }
+        }
+    }
+    @media only screen and (min-width:1800px){
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        flex-direction:column;
+        .block{
+            span{
+                margin-bottom:1em;
             }
         }
     }

@@ -108,6 +108,18 @@ const Container = styled.section`
             height:90vh;
         }
     }
+    @media only screen and (min-width:1800px){
+        header{
+            h1{
+                font-size:4em;
+            }
+        }
+        nav{
+            .nav-link{
+                font-size:1.1em;
+            }
+        }
+    }
 `
 const Home = ({firstName, setFirstName, lastName, setLastName,  email, setEmail,  password, setPassword, toggle}) => {
     return (
