@@ -41,7 +41,7 @@ const Container = styled.section`
         padding:.1em .2em;
         .image-container{
             width:2.5em;
-            height:2.5em;
+            height:2.1em;
             border:1px solid #264653;
             overflow:hidden;
             border-radius:50%;
