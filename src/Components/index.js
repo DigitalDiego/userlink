@@ -1,5 +1,4 @@
-export {default as Feed} from './Feed'
-export {default as Friends} from './Friends'
-export {default as FindPeople} from './FindPeople'
-export {default as SideMenu} from './SideMenu'
-export {default as DesktopContainer} from './DesktopContainer'
+export {default as LogInNav} from "./Nav/LogInNav"
+export {default as MainNav} from "./Nav/MainNav"
+export {default as LogIn} from "./LogInPage/LogIn"
+export {default as Home} from "./Home/Home"
