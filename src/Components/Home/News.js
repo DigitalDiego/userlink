@@ -28,6 +28,7 @@ const Container = styled.section`
         align-items:center;
         flex-direction:column;
         overflow-y:scroll;
+        padding: 0 .5em;
         &::-webkit-scrollbar{
             width:5px;
         }
@@ -39,7 +40,7 @@ const Container = styled.section`
             background:rgb(42, 61, 106);
         }
         .new-link{
-            width:320px;
+            width:100%;
             font-size:1em;
             padding:.5em;
             background:rgb(42, 61, 106);
@@ -74,11 +75,6 @@ const Container = styled.section`
     @media only screen and (min-width:800px){
         display:unset;
         width:20vw;
-        .news-container{
-            .new-link{
-                width:200px;
-            }
-        }
     }
 `
 const News = ({home}) => {

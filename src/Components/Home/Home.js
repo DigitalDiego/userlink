@@ -7,7 +7,8 @@ import SideMenu from "./SideMenu"
 const Container = styled.section`
     position:relative;
     width:100%;
-    height:90vh;
+    height:100vh;
+    overflow:hidden;
 `
 const Home = ({setSignedIn, handleDefault}) => {
   const [home, setHome] = useState(true)
