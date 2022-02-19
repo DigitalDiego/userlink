@@ -86,12 +86,12 @@ const News = ({home}) => {
         </header>
         <div className="news-container">
             {isFetching ? "Loading..." : data?.value.map((item, index) => (
-                <Link to={item.url} key={index} className="new-link" target="_blank" rel="noopener noreferrer">
+                <a href={item.url} key={index} className="new-link" target="_blank" rel="noopener noreferrer">
                     <p>{item.name}</p>
                     <div className="btn">
                         <button>View</button>
                     </div>
-                </Link>
+                </a>
             ))}
         </div>
     </Container>
